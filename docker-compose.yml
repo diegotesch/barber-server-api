@@ -1,0 +1,16 @@
+version: "2"
+services:
+  barberdb:
+    image: kartoza/postgis
+    container_name: "postgres-barber-db"
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=barber
+      - POSTGRES_USER=barber
+      - POSTGRES_DB=barberdb
+  # sonar:
+  #   image: sonarqube:7.9.2-community
+  #   container_name: sindnasonar
+  #   ports:
+  #     - 9000:9000
